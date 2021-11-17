@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3faf6cd2-9496-4d6f-b2ca-99157556ce5b" name="Changes" comment="Lyrics added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Lyrics/Base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Lyrics/Base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Lyrics/LyricsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Lyrics/LyricsList.html" afterDir="false" />
-    </list>
+    <list default="true" id="3faf6cd2-9496-4d6f-b2ca-99157556ce5b" name="Changes" comment="Lyrics added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +39,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LyricsOn/LyricsOn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
