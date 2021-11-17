@@ -4,12 +4,13 @@
 
 
 <div class="row" style="padding: 30px;">
-    <div class="col-md-6 col-xl-7">
+    <div class="col-md-6 col-xl-6">
         {% if actor.Upload %}
-            <img src="{{actor.Upload.url}}" alt="{{actor.Movie}}" class="mx-auto d-block" width="600" height="350">
+            <img src="{{actor.Upload.url}}" alt="{{actor.Movie}}" class="img-fluid"  style="width: 550px;height: 300px;border-radius: 30px;">
             {% endif %}
     </div>
-    <div class="col-md-6 col-xl-5">
+    <div class="col-md-6 col-xl-4">
+        <br>
         <br>
         <p>Name: <strong class="text-warning" style="font-size: 20px;">{{actor.FullName}}</strong></p>
         <p class="card-text"><strong>Gender:</strong> {{actor.Gender}}</p>
@@ -18,8 +19,9 @@
         <p class="card-text"><strong>Birth Place: </strong>{{actor.BirthPlace}}</p>
     </div>
 
-    <div class="row" style="padding: 40px;">
+    <div class="row" style="padding: 10px;">
         <div class="col-md-12">
+            <br>
             <h2 class="text-warning">Awards</h2>
             <p class="card-text">{{actor.Awards|linebreaks}}</p>
         </div>

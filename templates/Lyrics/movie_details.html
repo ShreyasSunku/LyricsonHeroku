@@ -4,38 +4,40 @@
 {% block Content %}
 
 
-<div class="row" style="padding: 30px;">
-    <div class="col-md-6 col-xl-7">
-        {% if actor.Upload %}
-            <img src="{{actor.Upload.url}}" alt="{{actor.Movie}}" class="mx-auto d-block" width="600" height="350">
-            {% endif %}
-    </div>
-    <div class="col-md-6 col-xl-5">
-        <br>
-        <p>Name: <strong class="text-warning" style="font-size: 20px;">{{actor.FullName}}</strong></p>
-        <p class="card-text"><strong>Gender:</strong> {{actor.Gender}}</p>
-        <p class="card-text"><strong>Date of Birth: </strong>{{actor.DoB}}</p>
-        <p class="card-text"><strong>Date of Death: </strong>{{actor.DOD}}</p>
-        <p class="card-text"><strong>Birth Place: </strong>{{actor.BirthPlace}}</p>
-    </div>
+<!--<div class="row" style="padding: 30px;">-->
+<!--    <div class="col-md-6 col-xl-6">-->
+<!--        {% if actor.Upload %}-->
+<!--            <img src="{{actor.Upload.url}}" alt="{{actor.Movie}}" class="img-fluid"  style="width: 550px;height: 300px;border-radius: 30px;">-->
+<!--            {% endif %}-->
+<!--    </div>-->
+<!--    <div class="col-md-6 col-xl-4">-->
+<!--        <br>-->
+<!--        <p>Name: <strong class="text-warning" style="font-size: 20px;">{{actor.FullName}}</strong></p>-->
+<!--        <p class="card-text"><strong>Gender:</strong> {{actor.Gender}}</p>-->
+<!--        <p class="card-text"><strong>Date of Birth: </strong>{{actor.DoB}}</p>-->
+<!--        <p class="card-text"><strong>Date of Death: </strong>{{actor.DOD}}</p>-->
+<!--        <p class="card-text"><strong>Birth Place: </strong>{{actor.BirthPlace}}</p>-->
+<!--    </div>-->
 
-    <div class="row" style="padding: 40px;">
-        <div class="col-md-12">
-            <h2 class="text-warning">Awards</h2>
-            <p class="card-text">{{actor.Awards|linebreaks}}</p>
-        </div>
-    </div>
-</div>
+<!--    <div class="row" style="padding: 40px;">-->
+<!--        <div class="col-md-12">-->
+<!--            <h2 class="text-warning">Awards</h2>-->
+<!--            <p class="card-text">{{actor.Awards|linebreaks}}</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <div class="py-4">
     <div class="container">
 
             {% if mov_details.Upload %}
-            <img src="{{mov_details.Upload.url}}" alt="{{mov_details.Movie}}" class="mx-auto d-block" width="350" height="236">
+            <img src="{{mov_details.Upload.url}}" alt="{{mov_details.Movie}}" class="mx-auto d-block img-fluid" style="width: 550px;height: 300px;border-radius: 30px;">
             {% endif %}
 
-            <p class="card-title">MovieName: <strong>{{mov_details.MovieName}}</strong></p>
+        <br>
+        <br>
+            <p>MovieName: <strong class="text-warning" style="font-size: 20px;">{{mov_details.MovieName}}</strong></p>
             <p class="card-text"><strong>Actor:</strong> {{mov_details.Actor}}</p>
             <p class="card-text"><strong>ReleaseDate: </strong>{{mov_details.ReleaseDate}}</p>
             <p class="card-text"><strong>MovieDirector: </strong>{{mov_details.MovieDirector}}</p>
@@ -50,8 +52,12 @@
             <p class="card-text"><strong>Review: </strong>{{mov_details.Review}}</p>
             <p class="card-text"><strong>YouTube: </strong>{{mov_details.Studio}}</p>
             <br>
-            <p><strong>Trailer From {{mov_details.MovieName}}: </strong></p>
+
+    <div class="row" style="padding: 10px;">
+            <p class="text-warning"><strong>Trailer From {{mov_details.MovieName}}: </strong></p>
             {% video mov_details.YouTube.youtube '1070x560' %}
+    </div>
+
 
 
     </div>

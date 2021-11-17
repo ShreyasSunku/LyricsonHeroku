@@ -3,13 +3,16 @@
 {% block Content %}
 
 <div class="row" style="padding: 30px;">
-        <div class="col-md-6 col-xl-7">
+        <div class="col-md-6 col-xl-6">
                 {% if singer.Upload %}
-                <img src="{{singer.Upload.url}}" alt="{{singer.Movie}}" class="mx-auto d-block" width="600" height="350">
+                <img src="{{singer.Upload.url}}" alt="{{singer.Movie}}" class="img-fluid"  style="width: 550px;height: 300px;border-radius: 30px;">
                 {% endif %}
         </div>
 
-        <div class="col-md-6 col-xl-5">
+        <div class="col-md-6 col-xl-4">
+                <br>
+                <br>
+
                 <p>Name: <strong class="text-warning" style="font-size: 20px;">{{singer.FullName}}</strong></p>
                 <p class="card-text"><strong>Gender:</strong> {{singer.Gender}}</p>
                 <p class="card-text"><strong>Date of Birth: </strong>{{singer.DoB}}</p>
@@ -19,6 +22,7 @@
 
         <div class="row" style="padding: 40px;">
                 <div class="col-md-12">
+                        <br>
                         <h2 class="text-warning">Awards</h2>
                         <p class="card-text">{{singer.Awards|linebreaks}}</p>
                 </div>
