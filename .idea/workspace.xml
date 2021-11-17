@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3faf6cd2-9496-4d6f-b2ca-99157556ce5b" name="Changes" comment="Lyrics added" />
+    <list default="true" id="3faf6cd2-9496-4d6f-b2ca-99157556ce5b" name="Changes" comment="Lyrics added">
+      <change beforePath="$PROJECT_DIR$/Project_Movie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Movie/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
