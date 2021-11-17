@@ -1,0 +1,25 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="py-4">
+    <div class="container">
+        <div class="row hidden-md-up">
+            {% for ll in lang_list %}
+            <div class="card-group col-md-2" style="padding: 2px;">
+                <div class="card" style="margin: 4px;border-radius: 15px;background: rgb(46,79,71);">
+                    {% if ll.Upload %}
+                    <img class="card-img-top" src="{{ll.Upload.url}}" alt="{{ll.Language}}" style="height: 175px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                    {% endif %}
+                    <div class="card-body" style="width: 200;background:rgba(32,201,151,0.7);border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;">
+                        <a href="{% url 'lang_songs' ll.id %}" class="text-warning">
+                            <h5 class="card-title">{{ll.Language}}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

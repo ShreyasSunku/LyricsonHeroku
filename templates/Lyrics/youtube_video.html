@@ -1,0 +1,5 @@
+{% load embed_video_tags %}
+
+{% for i in youtube_video %}
+    {% video i.youtube 'small' %}
+{% endfor %}

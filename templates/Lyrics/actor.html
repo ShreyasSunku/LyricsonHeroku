@@ -1,0 +1,30 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="py-4">
+    <div class="container">
+        <div class="row hidden-md-up">
+            {% for ad in actors_data %}
+            <div class="card-group col-md-2" style="padding: 2px;">
+                <div class="card" style="margin: 4px;border-radius: 15px;background: rgb(46,79,71);">
+                    {% if ad.Upload %}
+                    <img class="card-img-top" src="{{ad.Upload.url}}" alt="{{ad.FirstName}}" width="100%" height="200" style="height: 175px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                    {% endif %}
+                    <div class="card-body" style="width: 200;background:rgba(32,201,151,0.7);border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;">
+                        <a href="{% url 'actor_bio' ad.id %}" class="text-warning">
+                            <h5 class="card-title">{{ad.FirstName}} Bio</h5>
+                        </a>
+                        <a href="{% url 'actors_songs' ad.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="py-4">
+    <div class="container">
+        <div class="row hidden-md-up">
+            {% for mud in musicDir_data %}
+            <div class="card-group col-md-2" style="padding: 2px;">
+                <div class="card" style="margin: 4px;border-radius: 15px;background: rgb(46,79,71);">
+                    {% if mud.Upload %}
+                    <img class="card-img-top" src="{{mud.Upload.url}}" alt="{{mud.FirstName}}" style="height: 175px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                    {% endif %}
+                    <div class="card-body" style="width: 200;background:rgba(32,201,151,0.7);border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;">
+                        <a href="{% url 'musicDir_bio' mud.id %}" class="text-warning">
+                            <h5 class="card-title">{{mud.FirstName}}</h5>
+                        </a>
+                        <a href="{% url 'musicDir_mov' mud.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

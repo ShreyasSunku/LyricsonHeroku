@@ -1,0 +1,13 @@
+{% extends 'Lyrics/Base.html' %}
+{% load embed_video_tags %}
+
+{% block Content %}
+
+<div class="card-group row col-md-12">
+    {% for ls in m_list %}
+        {% include 'Lyrics/card_songs_list.html' %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}

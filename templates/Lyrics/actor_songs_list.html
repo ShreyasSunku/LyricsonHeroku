@@ -1,0 +1,15 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="py-4">
+    <div class="container">
+        <div class="row hidden-md-up">
+        {% for ls in actor_songs %}
+            {% include 'Lyrics/card_songs_list.html' %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

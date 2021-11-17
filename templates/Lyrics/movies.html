@@ -1,0 +1,144 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>All Movies Recently Added</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="row hidden-md-up">
+            {% for ls in all_movies %}
+                {% include 'Lyrics/card_movies_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>Telugu Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row hidden-md-up">
+        {% for ls in telugu_movies %}
+            {% include 'Lyrics/card_movies_list.html' %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>Hindi Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+       <div class="row hidden-md-up">
+            {% for ls in hindi_movies %}
+                {% include 'Lyrics/card_movies_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>Tamil Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="row hidden-md-up">
+            {% for ls in tamil_movies %}
+                {% include 'Lyrics/card_songs_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>Malayalam Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="row hidden-md-up">
+            {% for ls in malayalam_movies %}
+                {% include 'Lyrics/card_songs_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>Kannada Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="row hidden-md-up">
+            {% for ls in kannada_movies %}
+                {% include 'Lyrics/card_songs_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-10"><h3>English Movies</h3></div>
+            <div class="col-md-6 col-lg-2">
+                <a href="#">
+                    <button class="btn btn-primary" type="button" style="border-radius: 25px;">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="row hidden-md-up">
+            {% for ls in english_movies %}
+                {% include 'Lyrics/card_songs_list.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

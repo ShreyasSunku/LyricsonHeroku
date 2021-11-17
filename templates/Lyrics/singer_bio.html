@@ -1,0 +1,28 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="row" style="padding: 30px;">
+        <div class="col-md-6 col-xl-7">
+                {% if singer.Upload %}
+                <img src="{{singer.Upload.url}}" alt="{{singer.Movie}}" class="mx-auto d-block" width="600" height="350">
+                {% endif %}
+        </div>
+
+        <div class="col-md-6 col-xl-5">
+                <p>Name: <strong class="text-warning" style="font-size: 20px;">{{singer.FullName}}</strong></p>
+                <p class="card-text"><strong>Gender:</strong> {{singer.Gender}}</p>
+                <p class="card-text"><strong>Date of Birth: </strong>{{singer.DoB}}</p>
+                <p class="card-text"><strong>Date of Death: </strong>{{singer.DOD}}</p>
+                <p class="card-text"><strong>Birth Place: </strong>{{singer.BirthPlace}}</p>
+        </div>
+
+        <div class="row" style="padding: 40px;">
+                <div class="col-md-12">
+                        <h2 class="text-warning">Awards</h2>
+                        <p class="card-text">{{singer.Awards|linebreaks}}</p>
+                </div>
+        </div>
+</div>
+
+{% endblock %}

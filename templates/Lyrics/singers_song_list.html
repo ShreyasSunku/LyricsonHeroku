@@ -1,0 +1,11 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<div class="row hidden-md-up" style="margin: 30px;">
+    {% for ls in s_songs %}
+        {% include 'Lyrics/card_songs_list.html' %}
+    {% endfor %}
+</div>
+
+{% endblock %}

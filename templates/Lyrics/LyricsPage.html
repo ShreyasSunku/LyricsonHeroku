@@ -1,0 +1,60 @@
+{% extends 'Lyrics/Base.html' %}
+{% load embed_video_tags %}
+
+{% block Content %}
+
+
+<div class="row" style="padding: 30px;">
+    <div class="col-md-6 col-xl-7">
+        {% if lp.Upload %}
+        <img src="{{lp.Upload.url}}" alt="{{lp.Movie}}" class="mx-auto d-block" width="630" height="300">
+        {% endif %}
+    </div>
+    <div class="col-md-6 col-xl-5">
+        <br>
+        <br>
+        <p>Title: <b class="text-warning">{{lp.SongName}}</b></p>
+        <p><strong>Movie: </strong><a href="{% url 'm_list' lp.Movie.id %}">{{lp.Movie}}</a></p>
+        <p><strong>Singer: </strong><a href="{% url 'singerSongs' lp.Singer.id %}">{{lp.Singer}}</a></p>
+        <p><strong>MovieDirector: </strong><a href="{% url 'movieDir_mov' lp.MovieDirector.id %}">{{lp.MovieDirector}}</a></p>
+        <p><strong>MusicDirector: </strong><a href="{% url 'musicDir_mov' lp.MusicDirector.id %}">{{lp.MusicDirector}}</a></p>
+    </div>
+    <br>
+    <div class="row" style="padding: 30px;">
+        <div class="col-md-12">
+            <h2 class="text-warning">Lyrics</h2>
+            <p>{{lp.Lyrics|linebreaks}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="row" style="padding: 30px;">
+        <div class="col-md-12">
+            <p class="text-warning"><strong>{{lp.SongName}} Lyrical Video Song From {{lp.Movie}}: </strong></p>
+            {% video lp.YouTube.youtube '1070x560' %}
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="card-group">
+    <div class="card" style="background: rgb(46,79,71);">
+        {% if lp.Upload %}
+        <img src="{{lp.Upload.url}}" alt="{{lp.Movie}}" class="mx-auto d-block" width="500" height="300">
+        {% endif %}
+        <div class="card-body">
+            <p>Title: <b>{{lp.SongName}}</b></p>
+            <p><strong>Movie: </strong><a href="{% url 'm_list' lp.Movie.id %}">{{lp.Movie}}</a></p>
+            <p><strong>Singer: </strong><a href="{% url 'singerSongs' lp.Singer.id %}">{{lp.Singer}}</a></p>
+            <p><strong>MovieDirector: </strong><a href="{% url 'movieDir_mov' lp.MovieDirector.id %}">{{lp.MovieDirector}}</a></p>
+            <p><strong>MusicDirector: </strong><a href="{% url 'musicDir_mov' lp.MusicDirector.id %}">{{lp.MusicDirector}}</a></p>
+            <p><strong>Lyrics: </strong>{{lp.Lyrics|linebreaks}}</p>
+            <br>
+            <p><strong>{{lp.SongName}} Lyrical Video Song From {{lp.Movie}}: </strong></p>
+            {% video lp.YouTube.youtube '1070x560' %}
+
+        </div>
+    </div>
+</div>-->
+
+{% endblock %}

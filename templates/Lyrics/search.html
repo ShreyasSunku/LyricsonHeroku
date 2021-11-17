@@ -1,0 +1,122 @@
+{% extends 'Lyrics/Base.html' %}
+
+{% block Content %}
+
+<center>
+    {% if searched %}
+        <h1>You Searched For {{searched}}</h1>
+    <br>
+
+<!--    Song Name Search     -->
+    {% for ls in song_search %}
+        {% include 'Lyrics/card_songs_list.html' %}
+    {% endfor %}
+
+<!--    Movie Name Search      -->
+    {% for ls in movie_search %}
+        {% include 'Lyrics/card_movies_list.html' %}
+    {% endfor %}
+
+<!--   Actor Search     -->
+    {% for as in actor_search %}
+        <div class="col-md-4">
+                <div class="card">
+                    {% if as.Upload %}
+                    <img class="card-img-top" src="{{as.Upload.url}}" alt="{{as.FirstName}}" width="100%" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{% url 'actor_bio' as.id %}">
+                            <h5 class="card-title">{{as.FirstName}} Bio</h5>
+                        </a>
+                        <a href="{% url 'actors_songs' as.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+<!--    Singer Search      -->
+    {% for s in singer_search %}
+        <div class="col-md-4">
+                <div class="card">
+                    {% if s.Upload %}
+                    <img class="card-img-top" src="{{s.Upload.url}}" alt="Card image cap" width="100%" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{% url 'singer_bio' s.id %}">
+                            <h5 class="card-title">{{s.FirstName}}</h5>
+                        </a>
+                        <a href="{% url 'singerSongs' s.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+<!--Music Director Name Search      -->
+    {% for music_s in musicDir_search %}
+        <div class="col-md-4">
+                <div class="card">
+                    {% if music_s.Upload %}
+                    <img class="card-img-top" src="{{music_s.Upload.url}}" alt="{{music_s.FirstName}}" width="100%" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{% url 'musicDir_bio' music_s.id %}">
+                            <h5 class="card-title">{{music_s.FirstName}}</h5>
+                        </a>
+                        <a href="{% url 'musicDir_mov' music_s.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+<!--    Language Search       -->
+    {% for lang in language_search %}
+        <div class="col-md-4">
+                <div class="card">
+                    {% if lang.Upload %}
+                    <img class="card-img-top" src="{{lang.Upload.url}}" alt="{{lang.Language}}" width="100%" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{% url 'lang_songs' lang.id %}">
+                            <h5 class="card-title">{{lang.Language}}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+
+<!--Movie Director Name Search      -->
+    {% for mod in movieDir_search %}
+        <div class="col-md-4">
+                <div class="card">
+                    {% if mod.Upload %}
+                    <img class="card-img-top" src="{{mod.Upload.url}}" alt="{{mod.FirstName}}" width="100%" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{% url 'movieDir_bio' mod.id %}">
+                            <h5 class="card-title">{{mod.FirstName}}</h5>
+                        </a>
+                        <a href="{% url 'movieDir_mov' mod.id %}">
+                            <h5 class="card-title btn btn-outline-dark">Songs</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+
+    {% else %}
+        <h1>Not Found...</h1>
+
+    {% endif %}
+
+</center>
+
+{% endblock %}
