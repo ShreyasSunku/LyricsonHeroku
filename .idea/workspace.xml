@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3faf6cd2-9496-4d6f-b2ca-99157556ce5b" name="Changes" comment="Lyrics added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Lyrics/movie_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Lyrics/movie_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Lyrics/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Lyrics/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Lyrics/singers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Lyrics/singers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
