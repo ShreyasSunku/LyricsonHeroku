@@ -8,7 +8,8 @@
         <br>
 
 <!--    Song Name Search     -->
-
+    {% if song_search %}
+    <H3>Songs</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -17,10 +18,15 @@
             {% endfor %}
             </div>
         </div>
-    </div>
-    <hr>
+    </div><hr>
+    {% else %}
+        <p>No Songs are Found</p>
+    {% endif %}
+
 
 <!--    Movie Name Search      -->
+    {% if movie_search %}
+    <H3>Movies</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -29,11 +35,16 @@
             {% endfor %}
             </div>
         </div>
-    </div>
+    </div><hr>
+    {% else %}
+        <p>No Movies are Found</p>
+    {% endif %}
 
-    <hr>
+
 
 <!--   Actor Search     -->
+    {% if actor_search %}
+    <H3>Actors</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -56,11 +67,16 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> <hr>
+    {% else %}
+        <p>No Actors are Found</p>
+    {% endif %}
 
-    <hr>
+
 
 <!--    Singer Search      -->
+    {% if singer_search %}
+    <H3>Singers</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -84,11 +100,16 @@
             </div>
         </div>
     </div>
-
     <hr>
+    {% else %}
+        <p>No Singers are Found</p>
+    {% endif %}
+
 
 
 <!--Music Director Name Search      -->
+    {% if musicDir_search %}
+    <H3>Music Directors</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -112,35 +133,15 @@
             </div>
         </div>
     </div>
-
     <hr>
+    {% else %}
+        <p>No Music Directors are Found</p>
+    {% endif %}
 
-<!--    Language Search       -->
-    <div class="py-4">
-        <div class="container">
-            <div class="row hidden-md-up">
-            {% for lang in language_search %}
-                <div class="card-group col-md-2" style="padding: 2px;">
-                    <div class="card" style="margin: 4px;border-radius: 15px;background: rgb(46,79,71);">
-                        {% if lang.Upload %}
-                        <img src="{{lang.Upload.url}}" alt="{{lang.Language}}" style="height: 175px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
-                        {% endif %}
-                        <div class="card-body" style="width: 200;background:rgba(32,201,151,0.7);border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;">
-                            <a href="{% url 'lang_songs' lang.id %}" class="text-warning">
-                                <h5 class="card-title">{{lang.Language}}</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-
-    <hr>
 
 <!--Movie Director Name Search      -->
+    {% if movieDir_search %}
+    <H3>Movie Directors</H3>
     <div class="py-4">
         <div class="container">
             <div class="row hidden-md-up">
@@ -163,9 +164,37 @@
                 {% endfor %}
             </div>
         </div>
+    </div><hr>
+    {% else %}
+        <p>No Movie Directors are Found</p>
+    {% endif %}
+
+    <!--    Language Search       -->
+    {% if language_search %}
+    <H3>Languages</H3>
+    <div class="py-4">
+        <div class="container">
+            <div class="row hidden-md-up">
+            {% for lang in language_search %}
+                <div class="card-group col-md-2" style="padding: 2px;">
+                    <div class="card" style="margin: 4px;border-radius: 15px;background: rgb(46,79,71);">
+                        {% if lang.Upload %}
+                        <img src="{{lang.Upload.url}}" alt="{{lang.Language}}" style="height: 175px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                        {% endif %}
+                        <div class="card-body" style="width: 200;background:rgba(32,201,151,0.7);border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;">
+                            <a href="{% url 'lang_songs' lang.id %}" class="text-warning">
+                                <h5 class="card-title">{{lang.Language}}</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-
-
+    {% else %}
+        <p>No Languages are Found</p>
+    {% endif %}
 
 
     {% else %}
