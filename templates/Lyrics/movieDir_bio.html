@@ -17,6 +17,9 @@
                 <p class="card-text"><strong>Date of Birth: </strong>{{movieDir.DoB}}</p>
                 <p class="card-text"><strong>Date of Death: </strong>{{movieDir.DOD}}</p>
                 <p class="card-text"><strong>Birth Place: </strong>{{movieDir.BirthPlace}}</p>
+                <a href="{% url 'movieDir_mov' movieDir.id %}">
+                        <h5 class="card-title btn btn-outline-danger">Songs</h5>
+                </a>
         </div>
 
         <div class="row" style="padding: 10px;">

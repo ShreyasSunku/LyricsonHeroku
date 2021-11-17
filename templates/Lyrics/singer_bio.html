@@ -18,6 +18,11 @@
                 <p class="card-text"><strong>Date of Birth: </strong>{{singer.DoB}}</p>
                 <p class="card-text"><strong>Date of Death: </strong>{{singer.DOD}}</p>
                 <p class="card-text"><strong>Birth Place: </strong>{{singer.BirthPlace}}</p>
+
+                <a href="{% url 'singerSongs' singer.id %}">
+                        <h5 class="card-title btn btn-outline-danger">Songs</h5>
+                </a>
+
         </div>
 
         <div class="row" style="padding: 40px;">

@@ -17,6 +17,10 @@
         <p class="card-text"><strong>Date of Birth: </strong>{{actor.DoB}}</p>
         <p class="card-text"><strong>Date of Death: </strong>{{actor.DOD}}</p>
         <p class="card-text"><strong>Birth Place: </strong>{{actor.BirthPlace}}</p>
+
+        <a href="{% url 'actors_songs' actor.id %}">
+            <h5 class="card-title btn btn-outline-danger">Songs</h5>
+        </a>
     </div>
 
     <div class="row" style="padding: 10px;">

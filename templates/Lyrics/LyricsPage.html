@@ -13,10 +13,10 @@
         <br>
         <br>
         <p>Title: <b class="text-warning">{{lp.SongName}}</b></p>
-        <p><strong>Movie: </strong><a href="{% url 'm_list' lp.Movie.id %}">{{lp.Movie}}</a></p>
-        <p><strong>Singer: </strong><a href="{% url 'singerSongs' lp.Singer.id %}">{{lp.Singer}}</a></p>
-        <p><strong>MovieDirector: </strong><a href="{% url 'movieDir_mov' lp.MovieDirector.id %}">{{lp.MovieDirector}}</a></p>
-        <p><strong>MusicDirector: </strong><a href="{% url 'musicDir_mov' lp.MusicDirector.id %}">{{lp.MusicDirector}}</a></p>
+        <p><strong>Movie: </strong><a href="{% url 'movie_details' lp.Movie.id %}">{{lp.Movie}}</a></p>
+        <p><strong>Singer: </strong><a href="{% url 'singer_bio' lp.Singer.id %}">{{lp.Singer}}</a></p>
+        <p><strong>MovieDirector: </strong><a href="{% url 'movieDir_bio' lp.MovieDirector.id %}">{{lp.MovieDirector}}</a></p>
+        <p><strong>MusicDirector: </strong><a href="{% url 'musicDir_bio' lp.MusicDirector.id %}">{{lp.MusicDirector}}</a></p>
     </div>
     <br>
     <div class="row" style="padding: 30px;">

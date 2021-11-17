@@ -17,6 +17,9 @@
                 <p class="card-text"><strong>Date of Birth: </strong>{{musicDir.DoB}}</p>
                 <p class="card-text"><strong>Date of Death: </strong>{{musicDir.DOD}}</p>
                 <p class="card-text"><strong>Birth Place: </strong>{{musicDir.BirthPlace}}</p>
+                <a href="{% url 'musicDir_mov' musicDir.id %}">
+                        <h5 class="card-title btn btn-outline-danger">Songs</h5>
+                </a>
         </div>
 
 

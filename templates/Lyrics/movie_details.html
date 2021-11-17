@@ -9,6 +9,14 @@
             {% if mov_details.Upload %}
             <img src="{{mov_details.Upload.url}}" alt="{{mov_details.Movie}}" class="mx-auto d-block img-fluid" style="width: 550px;height: 300px;border-radius: 30px;">
             {% endif %}
+        <br>
+        <div class="row">
+            <div class="col-md-12 offset-md-5">
+                <a href="{% url 'm_list' mov_details.id %}" >
+                <h1 class="card-title btn btn-danger" style="width: 120px;height: 55px;font-size: 25px;">Songs</h1>
+            </a>
+            </div>
+        </div>
 
         <br>
         <br>
